@@ -38,6 +38,7 @@
 <div>
     <%@ include file="../layouts/slideshow.jsp"%>
 </div>
+
 <%--{newstypes8.des--%>
         <nav class="cd-gallery">
             <br>
