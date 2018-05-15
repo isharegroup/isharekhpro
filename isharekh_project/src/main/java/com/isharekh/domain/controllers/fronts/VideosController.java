@@ -68,7 +68,7 @@ public class VideosController {
         if (newsTypes != null && news != null) {
             for (NewsType newsType : newsTypes) {
                 for (News news1 : news) {
-                    if (newsType.getId() == 6) {
+                    if (newsType.getDesEn().equalsIgnoreCase("Home")) {
                         NewsType newsType1 = new NewsType();
                         newsType1.setId(newsType.getId());
                         newsType1.setDes(newsType.getDes());

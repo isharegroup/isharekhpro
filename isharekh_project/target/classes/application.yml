@@ -1,7 +1,7 @@
 spring:
   datasource:
     password: 1
-    url: jdbc:postgresql://localhost:5432/ishare_kh
+    url: jdbc:postgresql://localhost:5433/ishare_kh
     username: postgres
   jpa:
     generate-ddl: true

@@ -75,7 +75,6 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.16.18</version>
-			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
@@ -107,11 +106,13 @@
 			<artifactId>spring-data-jpa</artifactId>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
 		<dependency>
-			<groupId>postgresql</groupId>
+			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>9.1-901-1.jdbc4</version>
+			<version>9.3-1100-jdbc41</version>
 		</dependency>
+
 		<!-- hot swapping, disable cache for template, enable live reload -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
