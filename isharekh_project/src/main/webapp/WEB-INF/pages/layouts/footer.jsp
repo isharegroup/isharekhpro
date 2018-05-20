@@ -51,8 +51,6 @@
                 </div>
             </div>
         </div>
-        <br><br>
-
     <hr>
     <center>Copy right; my         <b>Phone: </b><em>097 66 17 899</em></center>
     <br><br>

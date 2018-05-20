@@ -124,6 +124,10 @@ public class VideosController {
     private ModelAndView detailVideos(@PathVariable("id") Long id) {
         ModelAndView modelAndView = new ModelAndView("/fronts/detail");
 
+        List<Vision> visions = getVisions();
+        List<About> abouts = getAboutUs();
+        List<Location> locations = getLocations();
+
         //test id
         System.out.println("ID: " + id);
         List<NewsType> newsTypes = (List<NewsType>) newsTypeService.getAll();
@@ -163,6 +167,16 @@ public class VideosController {
         modelAndView.addObject("newstypesThird", menu2);
         modelAndView.addObject("newsDetail",videoDetail);
 
+        //footer
+        if (visions != null) {
+            modelAndView.addObject("visions", visions);
+        }
+        if (abouts != null) {
+            modelAndView.addObject("abouts", abouts);
+        }
+        if (locations != null) {
+            modelAndView.addObject("locations", locations);
+        }
         return modelAndView;
     }
 
@@ -185,14 +199,15 @@ public class VideosController {
     }
 
     @RequestMapping(value = "/videoshome",method = RequestMethod.GET)
-    private ModelAndView videoHome(){
+    private ModelAndView videoHome() {
 
         ModelAndView modelAndView = new ModelAndView("/fronts/videos");
         List<NewsType> newsTypes = (List<NewsType>) newsTypeService.getAll();
         List<Video> videos = (List<Video>) fVideoService.getAll();
-        List<Vision> visions = (List<Vision>) visionRepository.findAll();
-        List<About> abouts = (List<About>) aboutRepository.findAll();
-        List<Location> locations = (List<Location>)  locationRepository.findAll();
+
+        List<Vision> visions = getVisions();
+        List<About> abouts = getAboutUs();
+        List<Location> locations = getLocations();
 
         NewsType menuHome = null;
         NewsType menu1 = null;
@@ -277,5 +292,29 @@ public class VideosController {
             modelAndView.addObject("locations", locations);
         }
         return modelAndView;
+    }
+
+    public List<Vision> getVisions() {
+        List<Vision> visions = (List<Vision>) visionRepository.findAll();
+        if (visions != null) {
+            return visions;
+        }
+        return null;
+    }
+
+    public List<About> getAboutUs(){
+        List<About> abouts = (List<About>) aboutRepository.findAll();
+        if (abouts != null) {
+            return abouts;
+        }
+        return null;
+    }
+
+    public List<Location> getLocations(){
+        List<Location> locations = (List<Location>) locationRepository.findAll();
+        if (locations != null) {
+            return locations;
+        }
+        return null;
     }
 }
