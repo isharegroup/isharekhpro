@@ -130,7 +130,7 @@ public class VideosController {
 
         //test id
         System.out.println("ID: " + id);
-        List<NewsType> newsTypes = (List<NewsType>) newsTypeService.getAll();
+        List<NewsType> newsTypes = (List<NewsType>)  getListNewsType();
 
         //get news by id
         Video videoDetail = (Video) fVideoService.getById(id);
@@ -183,7 +183,7 @@ public class VideosController {
     }
 
     private String getMenuList(List<NewsType> newsTypes) {
-        List<NewsType> newsTypeList = getNewsType();
+        List<NewsType> newsTypeList = getListNewsType();
         for (NewsType newsType : newsTypeList) {
             if (newsType.getId() == 8) {
                 return newsType.getDes();
@@ -195,16 +195,11 @@ public class VideosController {
         return null;
     }
 
-    private List<NewsType> getNewsType() {
-        List<NewsType> newsTypes = (List<NewsType>) newsTypeService.getAll();
-        return newsTypes;
-    }
-
     @RequestMapping(value = "/videoshome",method = RequestMethod.GET)
     private ModelAndView videoHome() {
 
         ModelAndView modelAndView = new ModelAndView("/fronts/videos");
-        List<NewsType> newsTypes = (List<NewsType>) newsTypeService.getAll();
+        List<NewsType> newsTypes = (List<NewsType>) getListNewsType();
         List<Video> videos = (List<Video>) fVideoService.getAll();
 
         List<Vision> visions = getVisions();
@@ -316,6 +311,14 @@ public class VideosController {
         List<Location> locations = (List<Location>) locationRepository.findAll();
         if (locations != null) {
             return locations;
+        }
+        return null;
+    }
+
+    public List<NewsType> getListNewsType(){
+        List<NewsType> newsTypes = (List<NewsType>) newsTypeService.getAll();
+        if(newsTypes!=null){
+            return newsTypes;
         }
         return null;
     }
