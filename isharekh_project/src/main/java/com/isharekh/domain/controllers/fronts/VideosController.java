@@ -276,8 +276,8 @@ public class VideosController {
         modelAndView.addObject("newstypesSecond", menu1);
         modelAndView.addObject("newstypesThird", menu2);
         //data
-        modelAndView.addObject("videoitemtype8", videoList1);
-        modelAndView.addObject("videoitemtype9", videoList2);
+        modelAndView.addObject("videoList1", videoList1);
+        modelAndView.addObject("videoList2", videoList2);
         //footer
         if (visions != null) {
             modelAndView.addObject("visions", visions);

@@ -23,11 +23,10 @@
                             1--%>
                             <li class="selected">
                                 <img src="https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzAzMS85MjAvb3JpZ2luYWwvc2h1dHRlcnN0b2NrXzExMDkxNzg4My5qcGc=" style="height: 200px;" />
-                                <%--<img src="https://cdn.iconscout.com/public/images/icon/free/png-512/youtube-social-media-3f1a5400c5182326-512x512.png" class="frontend-image selected"/>--%>
                             </li>
                         </div>
                     </div>
-                    <div class="item">
+                    <%--<div class="item">
                         <div class="col-md-3">
                             <a href="#"><img src="http://placehold.it/250x250" class="img-responsive center-block"></a>
                             2
@@ -63,12 +62,13 @@
                             7
                         </div>
                     </div>
-                </div>
+                </div>--%>
                 <a class="left carousel-control" href="#eventCarousel" data-slide="prev"></a>
                 <a class="right carousel-control" href="#eventCarousel" data-slide="next"></a>
             </div>
             <!--/carousel-inner-->
         </div><!--/myCarousel-->
+    </div>
     </div>
 </div>
 </body>

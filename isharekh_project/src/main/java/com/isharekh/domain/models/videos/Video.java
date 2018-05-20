@@ -43,6 +43,18 @@ public class Video extends BaseEntity {
 
     private String localVideo;
 
+    private String title;
+
+    private String speakers;
+
+    private String chanelName;
+
+    private String chanelUrl;
+
+    private String asker;
+
+    private VideoSD videoSD;
+
     @Column(name = "des",length = 2500)
     public String getDes() {
         return des;
@@ -161,5 +173,56 @@ public class Video extends BaseEntity {
 
     public void setLocalVideo(String localVideo) {
         this.localVideo = localVideo;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    @Column(name = "chanel_name")
+    public String getChanelName() {
+        return chanelName;
+    }
+
+    public void setChanelName(String chanelName) {
+        this.chanelName = chanelName;
+    }
+
+    @Column(name = "chanel_url")
+    public String getChanelUrl() {
+        return chanelUrl;
+    }
+
+    public void setChanelUrl(String chanelUrl) {
+        this.chanelUrl = chanelUrl;
+    }
+
+    public String getAsker() {
+        return asker;
+    }
+
+    public void setAsker(String asker) {
+        this.asker = asker;
+    }
+
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "video", cascade = CascadeType.ALL)
+    public VideoSD getVideoSD() {
+        return videoSD;
+    }
+
+    public void setVideoSD(VideoSD videoSD) {
+        this.videoSD = videoSD;
+    }
+
+    public String getSpeakers() {
+        return speakers;
+    }
+
+    public void setSpeakers(String speakers) {
+        this.speakers = speakers;
     }
 }
