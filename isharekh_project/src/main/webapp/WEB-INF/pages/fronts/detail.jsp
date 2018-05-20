@@ -42,7 +42,7 @@
 <div class="container">
     <div class="row">
         <div class="col-6">
-            <label>video detail</label>
+            <a href="#">${newsType.des}</a> <span class="glyphicon glyphicon-menu-right"></span><label>video detail</label>
         </div>
         <br><br><br><br>
         <div class="row">

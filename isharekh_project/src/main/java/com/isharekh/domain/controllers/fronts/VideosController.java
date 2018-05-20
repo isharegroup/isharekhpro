@@ -134,6 +134,7 @@ public class VideosController {
 
         //get news by id
         Video videoDetail = (Video) fVideoService.getById(id);
+        NewsType newsTypeMenu = (NewsType) newsTypeService.getById(videoDetail.getNewsType().getId());
 
         NewsType menuHome = null;
         NewsType menu1 = null;
@@ -166,6 +167,7 @@ public class VideosController {
         modelAndView.addObject("newstypesSecond", menu1);
         modelAndView.addObject("newstypesThird", menu2);
         modelAndView.addObject("newsDetail",videoDetail);
+        modelAndView.addObject("newsType",newsTypeMenu);
 
         //footer
         if (visions != null) {
