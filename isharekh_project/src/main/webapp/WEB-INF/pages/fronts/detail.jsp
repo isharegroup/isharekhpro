@@ -47,7 +47,7 @@
         <br><br><br><br>
         <div class="row">
             <div class="col-sm-8">
-                <iframe class="selected" style="width: 100%; height: 400px;" src="${newsDetail.remoteVideoUrl}?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                <iframe class="selected" style="width: 100%; height: 400px;" src="${newsDetail.localVideo}?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
                 </iframe>
             </div>
             <div class="col-sm-4">

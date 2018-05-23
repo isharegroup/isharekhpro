@@ -84,10 +84,10 @@
 </nav>
 
 <ul class="cd-gallery">
-    <c:forEach items="${videoList2}" var="videoList2">
+    <c:forEach items="${videoList1}" var="videoList1">
         <li>
             <div class="cd-single-item">
-                <a href="/front/detail/${videoList2.id}">
+                <a href="/front/detail/${videoList1.id}">
                     <ul class="cd-slider-wrapper" style="height: 200px;">
                         <li class="selected">
                             <img src="https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzAzMS85MjAvb3JpZ2luYWwvc2h1dHRlcnN0b2NrXzExMDkxNzg4My5qcGc=" class="selected backend-image" />
@@ -100,7 +100,7 @@
             </div> <!-- .cd-single-item -->
 
             <div class="cd-item-info">
-                <em>  Speakers ${videoList2.author.name}</em>
+                <em>  Speakers ${videoList1.author.name}</em>
                <%-- <em>  Speakers ${videoList1.author.name}</em>--%>
             </div>
         </li>

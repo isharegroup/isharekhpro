@@ -15,24 +15,26 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    <c:forEach items="${visions}" var="visitem">
-                        <div class="col-md-4">
-                            <h3>${visitem.title}</h3>
-                            <br>
-                            ${visitem.des}
-                            <br><br>
-                        </div>
-                    </c:forEach>
-                    <c:forEach items="${abouts}" var="abouts">
+                    <c:forEach items="${visions}" var="visions">
                         <div class="col-md-4">
                             <h3>
-                                ${abouts.title}
+                                ${visions.title}
                             </h3>
                             <br>
-                             ${abouts.des}
+                             ${visions.des}
                             <br><br>
                         </div>
                     </c:forEach>
+                        <c:forEach items="${abouts}" var="abouts">
+                            <div class="col-md-4">
+                                <h3>
+                                        ${abouts.title}
+                                </h3>
+                                <br>
+                                    ${abouts.des}
+                                <br><br>
+                            </div>
+                        </c:forEach>
                     <c:forEach items="${locations}" var="locations">
                         <div class="col-md-4">
                             <h1>${locations.title}</h1>
